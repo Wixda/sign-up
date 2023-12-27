@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Sofia+Sans:wght@300;400;500;600;700&display=swap');
+
+
+@font-face {
+    font-family: 'sofia_prolight';
+    src: url('./fonts/sofiapro-light-webfont.woff2') format('woff2'),
+         url('./fonts/sofiapro-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'sofia_prolight', 'sofia sans', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 85%;
+    padding: 80px 0;
+    margin: auto;
+}
+
+main .content-wrapper {
+    width: 444px;
+    margin-top: 124px;
+}
+
+.content-wrapper #logo-image {
+    height: 120px;
+    width: 120px;
+    margin-bottom: 32px;
+}
+
+.content-wrapper h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    color: hsla(174, 100%, 2%, 1);
+    margin-bottom: 24px;
+}
+
+.content-wrapper p {
+    font-weight: 400;
+    line-height: 24px;
+    color: hsla(0, 0%, 45%, 1);
+}
+
+.mobile {
+    display: none;
+}
+
+main form {
+    padding: 40px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.10);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 600px;
+}
+
+main form .input-box {
+    width: 230px;
+}
+
+main form .input-box.full, form .input-box.full {
+    width: 100%;
+}
+
+main form .input-box label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+main form .input-box input, main form .input-box select {
+    font-size: 14px;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid hsla(0, 0%, 94%, 1);
+}
+
+main form .input-box input[type="text"]:focus {
+    border: 1px solid hsla(174, 62%, 47%, 1);
+}
+
+main form .input-box .password-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+main form .input-box .password-wrapper .fa-eye {
+    position: absolute;
+    top: 28%;
+    right: 4%;
+    cursor: pointer;
+    color: hsla(0, 0%, 65%, 1);
+}
+
+main form input[type="submit"] {
+    padding: 16px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: hsla(0, 0%, 100%, 1);
+    background-color: hsla(174, 62%, 47%, 1);
+    border: none;
+}
+
+main form p {
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    margin: auto;
+}
+
+main form p a {
+    color: hsla(174, 62%, 47%, 1);
+    font-weight: 500;
+}
+
+main form p a:hover {
+    text-decoration: none;
+}
+
+@media(max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 60px 0;
+    }
+
+    main form .input-box {
+        width: 100%;
+    }
+}
+
+@media(max-width: 425px) {
+    main {
+        width: 90%;
+        padding: 10px 0;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    main .content-wrapper {
+        width: 444px;
+        margin-top: 24px;
+        margin-bottom: 8px;
+    }
+
+    .content-wrapper #logo-image {
+        height: 60px;
+        width: 60px;
+        margin-bottom: 16px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: revert;
+    }
+
+    main form {
+        padding: 16px;
+    }
+}

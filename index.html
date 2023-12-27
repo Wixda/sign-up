@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Individual</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <main>
+        <div class="content-wrapper">
+            <div class="logo">
+                <img src="./images/Logo.svg" alt="Company Logo" id="logo-image">
+            </div>
+            <h1>For Individuals</h1>
+            <p class="desktop">Start benefitting from the wellness experience. For companies looking 
+                on increasing productivity, and improving organization wellness.
+            </p>
+            <p class="mobile">Inspiring wholesome harmony for the mind, body and spirit, for everyone, everywhere.</p>
+        </div>
+
+        <form action="" method="post">
+            <div class="input-box">
+                <label for="first-name">First Name</label><br>
+                <input type="text" name="first-name" id="first-name" required>
+            </div>
+            
+            <div class="input-box">
+                <label for="last-name">Last Name</label><br>
+                <input type="text" name="last-name" id="last-name" required>
+            </div>
+
+            <div class="input-box">
+                <label for="gender">Gender</label><br>
+                <select id="gender" name="gender">
+                    <option value="" disabled selected>Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label for="dob">Date of Birth</label><br>
+                <input type="date" name="dob" id="dob" placeholder="Select here" required>
+            </div>
+
+            <div class="input-box">
+                <label for="weight">Weight (KG)</label><br>
+                <input type="text" name="weight" id="weight" placeholder="Enter weight" required>
+            </div>
+
+            <div class="input-box">
+                <label for="height">Height (CM)</label><br>
+                <input type="text" name="height" id="height" placeholder="Enter height" required>
+            </div>
+
+            <div class="input-box full">
+                <label for="activity-level">Activity Level</label><br>
+                <select id="activity-level" name="activity-level">
+                    <option value="" disabled selected>Select here</option>
+                    <option value="low">Low</option>
+                    <option value="average">Average</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+
+            <div class="input-box full" >
+                <label for="password">Password</label><br>
+                <div class="password-wrapper">
+                    <input type="password" name="password" id="password" required>
+                    <i class="fa-regular fa-eye" id="eye"></i>
+                </div>
+            </div>
+
+            <input type="submit" value="Register">
+            <p>By clicking Register, you agree to our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a></p>    
+
+
+        </form>
+    </main>
+
+    <script>
+        const passwordInput = document.querySelector("#password");
+        const eye = document.querySelector("#eye");
+        eye.addEventListener("click", function(){
+        this.classList.toggle("fa-eye-slash");
+        const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+        passwordInput.setAttribute("type", type);
+})
+    </script>
+</body>
+</html>
